@@ -1,0 +1,126 @@
+:root {
+    --font-color: #d9990e;
+    --accent-color: rgb(66, 25, 25, 0.8);
+    --accent-color-light: rgb(240, 181, 71);
+    --door-color: rgb(57, 36, 20);
+    --door-color-dark: rgb(34, 23, 15);
+    --beige-text: rgb(239, 208, 149);
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: var(--font-color);
+    text-shadow: 2px 2px 3px black;
+}
+
+header {
+    background-color: var(--accent-color);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(135, 121, 95, 50%);
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+footer {
+    color: var(--accent-color);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px white;
+}
+.next {
+    display: flex;
+    background-color: rgb(193, 142, 47);
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+}
+.next:hover {
+    background-color: rgb(212, 171, 95);
+    color: var(--accent-color);
+}
+#door {
+    background: linear-gradient(to right, var(--door-color), var(--door-color-dark));
+    width: 120px;
+    height: 200px;
+    border: 2px solid rgb(73, 52, 20);
+    position: absolute;
+    top: 150px;
+    left: 650px;
+    z-index: 2;
+    transform-origin: left;
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease;
+}
+
+#door::after {
+    content: "•";
+    color: var(--accent-color-light);
+    font-size: 2em;
+    text-shadow: 0 0 8px var(--accent-color-light);
+    position: relative;
+    top: 80px;
+    left: 90px;
+}
+#decoration {
+    position: absolute;
+    top: 150px;
+    left: 360px;
+    width: 700px;
+    height: 200px;
+    background-image: url("./media/room1_decoration.png");
+    background-size: cover;
+    border: 3px solid rgb(73, 52, 20);
+    border-radius: 8px;
+    z-index: 1;
+}
+details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--beige-text);
+    background-color: var(--accent-color);
+    border-top: 2px solid rgb(135, 121, 95, 50%);
+    width: 100%;
+    height: 70px;
+    padding: 10px 20px;
+    z-index: 0;
+    cursor: pointer;
+}
+details[open] {
+    height: auto;
+    animation: fadeIn 0.5s ease-in-out;
+    padding-bottom: 30px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

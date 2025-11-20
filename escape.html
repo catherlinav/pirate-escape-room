@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏴‍☠️ Pirate's Escape to Treasure - Escaped!</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        body {
+            background-image: url("./media/escape_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            padding: 25px;
+            font-size: 2.5em;
+            animation-name: fadeInUpGlow;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        #message, .return {
+            animation-name: fadeInUp;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        #message {
+            font-size: 1.2em;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            max-width: 600px;
+            padding-bottom: 25px;
+        }
+        .return {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            width: 150px;
+            justify-content: center;
+            margin: auto;
+            border: 2px solid var(--font-color);
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .return:hover {
+            background-color: var(--font-color);
+            color: white;
+            box-shadow: 0px 0px 25px var(--font-color);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes fadeInUpGlow {
+            0% {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px);
+                text-shadow: 0 0 40px var(--font-color), 0 0 40px var(--font-color);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+                text-shadow: 0 0 30px var(--font-color), 0 0 30px var(--font-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🏴‍☠️ Pirate's Escape to Treasure - Escaped!</h1>
+    </header>
+    <main>
+        <h1>You Found the Treasure!</h1>
+
+        <p id="message">
+            Yo ho ho! Congratulations, clever pirate! You've successfully solved the puzzles
+            and uncovered the hidden treasure within the cave. The next adventure for treasure awaits!
+        </p>
+        
+        <a class="return" href="index.html">Return to Entrance</a>
+    </main>
+    <footer>
+        <p>Pirate's Escape to Treasure Project | Built with HTML + CSS only</p>
+    </footer>
+</body>
+</html>

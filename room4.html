@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏴‍☠️ Pirate's Escape to Treasure - Near the Gold</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        body {
+            background-image: url("./media/room4_background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .hot-zone {
+            position: absolute;
+            width: 150px;
+            height: 250px;
+            top: 110px;
+            left: 100px;
+            opacity: 1;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .hot-zone:hover {
+            box-shadow: 0 0 100px rgb(224, 188, 116) inset;
+            transition: 3s ease-in-out;
+        }
+        #hot-zone-check {
+            opacity: 0;
+        }
+        #hot-zone-check:checked ~ #door{
+            transform: rotateY(110deg);
+        }
+        .next {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
+        #hot-zone-check:checked ~ .next {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🏴‍☠️ Pirate's Escape to Treasure - Near the Gold</h1>
+    </header>
+    <main>
+        <label for="hot-zone-check" class="hot-zone"></label>
+        <input type="checkbox" id="hot-zone-check"></input>
+        <div id="door"></div>
+
+        <a class="next" href="escape.html">Enter Next Room →</a>
+
+    </main>
+    <details>
+        <summary>Show Instructions / Hints</summary>
+        <p>You're near the treasure and can feel it! However, an essence must be touched before the door unlocks.
+            <ul>
+                <li>Hover over areas to find the hot-zone.</li>
+                <li>Click on the glowing essence to unlock the door!</li>
+                <li>The glowing essence can be found near the left light.</li>
+            </ul>
+        </p>
+    </details>
+    <footer>
+        <p>Pirate's Escape to Treasure Project | Built with HTML + CSS only</p>
+    </footer>
+</body>
+</html>

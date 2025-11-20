@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏴‍☠️ Pirate's Escape to Treasure - Gem Room</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        body {
+            background-image: url("./media/room1_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #door {
+            transform-origin: left;
+            transform: rotateY(0deg);
+            transition: transform 0.6s ease;
+        }
+        #secret-lock:checked ~ #door{
+            transform: rotateY(110deg);
+        }
+        #secret-lock {
+            opacity: 0;
+        }
+        #book1, #book2, #book3, #book4, #book5 {
+            opacity: 0;
+        }
+        #book1Gem, #book2Gem, #book3Gem, #book4Gem, #book5Gem {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 1;
+            z-index: 5;
+        }
+        #book1Gem {
+            top: 150px;
+            left: 350px;
+            background-color: rgb(255, 55, 55);
+            box-shadow: 0 0 20px rgb(255, 55, 55);
+        }
+        #book2Gem {
+            top: 180px;
+            left: 470px;
+            background-color: rgb(55, 95, 255);
+            box-shadow: 0 0 20px rgb(55, 95, 255);
+        }
+        #book3Gem {
+            top: 240px;
+            left: 360px;
+            background-color: rgb(46, 197, 111);
+            box-shadow: 0 0 20px rgb(46, 197, 111);
+        }
+        #book4Gem {
+            top: 270px;
+            left: 460px;
+            background-color: rgb(181, 69, 198);
+            box-shadow: 0 0 20px rgb(181, 69, 198);
+        }
+        #book5Gem {
+            top: 330px;
+            left: 380px;
+            background-color: rgb(232, 168, 66);
+            box-shadow: 0 0 20px rgb(232, 168, 66);
+        }
+        .next {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
+        #secret-lock:checked ~ .next {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🏴‍☠️ Pirate's Escape to Treasure - Gem Room</h1>
+    </header>
+    <main>
+        <input type="checkbox" id="secret-lock"></input>
+
+        <label for="book1" id="book1Gem"></label>
+        <input type="checkbox" id="book1"></input>
+
+        <label for="book2" id="book2Gem"></label>
+        <input type="checkbox" id="book2"></input>
+
+        <label for="book3" id="book3Gem"></label>
+        <input type="checkbox" id="book3"></input>
+
+        <label for="book4" id="book4Gem"></label>
+        <input type="checkbox" id="book4"></input>
+        
+        <label for="book5" id="book5Gem"></label>
+        <input type="checkbox" id="book5"></input>
+
+        <div id="door"></div>
+
+        <a class="next" href="room3.html">Enter Next Room →</a>
+    </main>
+    <details>
+        <summary>Show Instructions / Hints</summary>
+        <p>In this room, you see 5 colorful gems. You have to pick the correct ones to unlock the next door.
+            <ul>
+                <li>Click on each colored gem to see they're correct</li>
+                <li>Only 2 are correct, selecting more could ruin your chances!</li>
+                <li>Pick yellow and pink.</li>
+            </ul>
+        </p>
+    </details>
+    <footer>
+        <p>Pirate's Escape to Treasure Project | Built with HTML + CSS only</p>
+    </footer>
+
+    <script src="room2.js"></script>
+</body>
+</html>

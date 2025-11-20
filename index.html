@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        body {
+            background-image: url("./media/index_background.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #landing {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            width: 85%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: var(--accent-color);
+            border-radius: 8px;
+        }
+
+        #landing h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #landing p, h2 {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        #landing h2 {
+            margin: 5px;
+        }
+
+        #landing p, li {
+            color: rgb(239, 208, 149);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🏴‍☠️ Pirate's Escape to Treasure</h1>
+    </header>
+    <main>
+        <section id="landing">
+            <h1>Ahoy, fellow Pirate!</h1>
+
+            <p>You've chosen to explore this cave that you encountered nearby. </p>
+
+            <h2>🔑 What You'll Find</h2>
+            <ul>
+                <li>Hidden elements that uncover when you hover over them.</li>
+                <li>Interactive items to help get closer to the treasure.</li>
+                <li>Interactive items to help get closer to the treasure.</li>
+            </ul>
+
+            <h2>⚓️ How to Play</h2>
+            <ul>
+                <li>Navigate the cave and solve puzzles to find the treasure.</li>
+                <li>Use your cursor to uncover clues and solve puzzles.</li>
+                <li>Good luck and have fun!</li>
+            </ul>
+            
+            <a class="next" href="room1.html">Enter the Cave</a>
+        </section>
+    </main>
+    <footer>
+        <p>Pirate's Escape to Treasure Project | Built with HTML + CSS only</p>
+    </footer>
+</body>
+</html>

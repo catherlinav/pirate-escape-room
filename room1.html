@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏴‍☠️ Pirate's Escape to Treasure - Cave Entrance</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        body {
+            background-image: url("./media/room1_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #door-check {
+            opacity: 0;
+        }
+        #door-check:checked ~ #door{
+            transform: rotateY(110deg)
+        }
+        .key {
+            position: absolute;
+            top: 440px;
+            left: 400px;
+            background-color: rgb(228, 171, 12);
+            border-radius: 4px;
+            width: 55px;
+            height: 15px;
+            opacity: 0;
+        }
+        .key:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.5s ease-in-out; 
+        }
+        .key::after {
+            font-size: 4em;
+            position: relative;
+            top: -40px;
+            left: 25px;
+            content: "𖧋";
+            color: gold;
+        }
+        .next {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
+        #door-check:checked ~ .next {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>🏴‍☠️ Pirate's Escape to Treasure - Cave Entrance</h1>
+    </header>
+    <main>
+        <div id="decoration"></div>
+        <label for="door-check" class="key" title="Click the key to unlock the door"></label>
+        <input type="checkbox" id="door-check"></input>
+        <div id="door"></div>
+        <a class="next" href="room2.html">Enter Next Room →</a>
+    </main>
+    <details>
+        <summary>Show Instructions / Hints</summary>
+        <p>Welcome to the cave entrance! The door is locked though... You'll need to find a way to open this door.
+            <ul>
+                <li>Explore the area by hovering over areas.</li>
+                <li>Try looking below the left of the wall.</li>
+            </ul>
+        </p>
+    </details>
+    <footer>
+        <p>Pirate's Escape to Treasure Project | Built with HTML + CSS only</p>
+    </footer>
+</body>
+</html>
