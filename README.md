@@ -7,6 +7,6 @@
 
 Demo:
 
-<img src="https://github.com/catherlinav/pirate-escape-room/blob/main/media/demo.gif" alt=demo width=600>
+<img src="https://github.com/catherlinav/pirate-escape-room/blob/main/media/demo.gif" alt=demo width=800>
 
 
